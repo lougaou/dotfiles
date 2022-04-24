@@ -24,6 +24,9 @@
     "[scss]": {
         "editor.defaultFormatter": "michelemelluso.code-beautifier"
     },
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
     "better-comments.tags": [
         {
             "backgroundColor": "transparent",
@@ -116,6 +119,7 @@
         "*.html": "html",
         "*.md.dist": "markdown",
         "*.twig": "html",
+        "*.xml.dist": "xml",
         "*.yaml.dist": "yaml",
         "Dockerfile*": "dockerfile"
     },
@@ -216,14 +220,22 @@
         "mongodb"
     ],
     "npm.enableRunFromFolder": true,
-    "npm.validate.enable": true,
-    "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
+    "php-cs-fixer.allowRisky": true,
+    "php-cs-fixer.autoFixByBracket": true,
+    "php-cs-fixer.autoFixBySemicolon": true,
+    "php-cs-fixer.config": "${workspaceFolder}/.php-cs-fixer.dist.php",
+    "php-cs-fixer.documentFormattingProvider": true,
+    "php-cs-fixer.exclude": [],
+    "php-cs-fixer.executablePath": "${workspaceFolder}/vendor/bin/php-cs-fixer",
     "php-cs-fixer.formatHtml": true,
-    "php-cs-fixer.lastDownload": 1650127106639,
-    "php-cs-fixer.rules": "@PSR2",
+    "php-cs-fixer.onsave": true,
+    "php-cs-fixer.pathMode": "override",
     "php.suggest.basic": false,
-    "phpSniffer.autoDetect": true,
+    "phpmd.rules": "${workspaceFolder}/phpmd.xml.dist",
+    "phpmd.verbose": true,
     "phpstan.path": "vendor/bin/phpstan",
+    "psalm.enableVerbose": true,
+    "psalm.psalmVersion": "",
     "redhat.telemetry.enabled": false,
     "security.workspace.trust.untrustedFiles": "open",
     "sonarlint.disableTelemetry": true,
@@ -270,34 +282,47 @@
     "telemetry.telemetryLevel": "error",
     "terminal.integrated.defaultProfile.windows": "Ubuntu-20.04 (WSL)",
     "todo-tree.general.tags": [
-        "BUG",
         "HACK",
         "FIXME",
-        "//TODO",
-        "//TO BE CONFIRMED"
+        "TODO",
+        "TO BE CONFIRMED"
     ],
     "todo-tree.highlights.customHighlight": {
-        "//TO BE CONFIRMED": {
-            "background": "yellow",
-            "foreground": "black",
+        "HACK": {
+            "background": "#00de00",
+            "foreground": "#fff",
             "gutterIcon": true,
-            "icon": "cross-reference",
-            "iconColour": "yellow",
-            "opacity": 50,
-            "type": "text"
-        },
-        "//TODO": {
-            "background": "blue",
-            "foreground": "black",
-            "gutterIcon": true,
-            "icon": "tools",
-            "iconColour": "blue",
-            "type": "text"
+            "icon": "beaker",
+            "iconColour": "#00de00",
+            "opacity": 100,
+            "type": "text-and-comment"
         },
         "FIXME": {
-            "foreground": "black",
+            "background": "#ff0000",
+            "foreground": "#ffffff",
             "gutterIcon": true,
-            "iconColour": "yellow"
+            "icon": "tools",
+            "iconColour": "#ff0000",
+            "opacity": 100,
+            "type": "text-and-comment"
+        },
+        "TO BE CONFIRMED": {
+            "background": "#ffff00",
+            "foreground": "#000",
+            "gutterIcon": true,
+            "icon": "cross-reference",
+            "iconColour": "#ffff00",
+            "opacity": 100,
+            "type": "text-and-comment"
+        },
+        "TODO": {
+            "background": "#0000cc",
+            "foreground": "#ffffff",
+            "gutterIcon": true,
+            "icon": "tools",
+            "iconColour": "#0000cc",
+            "opacity": 100,
+            "type": "text-and-comment"
         }
     },
     "twig-language-2.correct": true,

@@ -27,5 +27,9 @@
         "key": "ctrl+alt+l",
         "command": "lorem-ipsum.paragraph",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+g",
+        "command": "phpGetterSetter.insertGetterAndSetter"
     }
 ]
