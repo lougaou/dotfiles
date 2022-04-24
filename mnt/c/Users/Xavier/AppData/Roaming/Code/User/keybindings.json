@@ -1,0 +1,31 @@
+// Placer vos combinaisons de touches dans ce fichier pour remplacer les valeurs par défaut
+[
+    {
+        "key": "ctrl+shift+u",
+        "command": "editor.action.transformToUppercase"
+    },
+    {
+        "key": "alt+oem_5",
+        "command": "github.copilot.openPanelForRange"
+    },
+    {
+        "key": "alt+oem_2",
+        "command": "editor.action.inlineSuggest.showNext",
+        "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus"
+    },
+    {
+        "key": "alt+oem_8",
+        "command": "editor.action.inlineSuggest.showPrevious",
+        "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus"
+    },
+    {
+        "key": "alt+oem_3",
+        "command": "editor.action.inlineSuggest.trigger",
+        "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
+    },
+    {
+        "key": "ctrl+alt+l",
+        "command": "lorem-ipsum.paragraph",
+        "when": "editorTextFocus"
+    }
+]

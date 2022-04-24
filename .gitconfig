@@ -1,0 +1,42 @@
+[user]
+    name = Xavier R.
+    email = 295150+lougaou@users.noreply.github.com
+	
+[alias]
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    adda = add --all
+    s = status
+    wdiff = diff --word-diff
+	
+# activate color for all commands
+[color]
+    ui = auto
+    
+# push only the current branch to its upstream branch
+[push]
+    default = upstream
+    
+# diff with meaningful prefix and word-diff will find a letter as a word
+[diff]
+    mnemonicprefix = true
+    wordRegex = .
+  	
+[color "status"]
+    changed = cyan normal bold
+    untracked = cyan normal bold
+
+[credential]
+    helper = cache --timeout=3600
+    
+# commands will be autocorrect (rset -> reset)
+[help]
+    autocorrect = -1
+
+# merge is looking harder for renames
+[merge]
+    renamelimit = 3000    
+
+[core]
+    autocrlf = false
+    eol = lf
+	hooksPath = .githooks

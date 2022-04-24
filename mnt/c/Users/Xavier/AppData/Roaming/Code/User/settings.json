@@ -1,0 +1,310 @@
+{
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[makefile]": {
+        "editor.detectIndentation": false,
+        "editor.insertSpaces": false
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
+    "[nginx]": {
+        "editor.defaultFormatter": "ahmadalli.vscode-nginx-conf"
+    },
+    "[php]": {
+        "editor.defaultFormatter": "junstyle.php-cs-fixer"
+    },
+    "[scss]": {
+        "editor.defaultFormatter": "michelemelluso.code-beautifier"
+    },
+    "better-comments.tags": [
+        {
+            "backgroundColor": "transparent",
+            "bold": false,
+            "color": "#FF2D00",
+            "italic": false,
+            "strikethrough": false,
+            "tag": "!",
+            "underline": false
+        },
+        {
+            "backgroundColor": "transparent",
+            "bold": false,
+            "color": "#3498DB",
+            "italic": false,
+            "strikethrough": false,
+            "tag": "?",
+            "underline": false
+        },
+        {
+            "backgroundColor": "transparent",
+            "bold": false,
+            "color": "#474747",
+            "italic": false,
+            "strikethrough": true,
+            "tag": "//",
+            "underline": false
+        },
+        {
+            "backgroundColor": "transparent",
+            "bold": false,
+            "color": "#FF8C00",
+            "italic": false,
+            "strikethrough": false,
+            "tag": "todo",
+            "underline": false
+        },
+        {
+            "backgroundColor": "transparent",
+            "bold": false,
+            "color": "#98C379",
+            "italic": false,
+            "strikethrough": false,
+            "tag": "*",
+            "underline": false
+        }
+    ],
+    "bracket-pair-colorizer-2.depreciation-notice": false,
+    "css.enabledLanguages": [
+        "html",
+        "twig"
+    ],
+    "css.styleSheets": [
+        "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css",
+        "${fileBasenameNoExtension}.css"
+    ],
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false,
+    "editor.guides.bracketPairs": true,
+    "editor.inlineSuggest.enabled": true,
+    "editor.quickSuggestions": {
+        "comments": true,
+        "other": true,
+        "strings": true
+    },
+    "editor.snippetSuggestions": "top",
+    "editor.suggestSelection": "first",
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+        "plaintext": "pug",
+        "razor": "html",
+        "twig": "html"
+    },
+    "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
+    "emmet.showSuggestionsAsSnippets": true,
+    "emmet.triggerExpansionOnTab": true,
+    "eslint.alwaysShowStatus": true,
+    "eslint.codeAction.showDocumentation": {
+        "enable": true
+    },
+    "eslint.format.enable": true,
+    "eslint.validate": [
+        "typescript",
+        "typescriptreact"
+    ],
+    "files.associations": {
+        "*.conf.dist": "NGINX",
+        "*.htm": "html",
+        "*.html": "html",
+        "*.md.dist": "markdown",
+        "*.twig": "html",
+        "*.yaml.dist": "yaml",
+        "Dockerfile*": "dockerfile"
+    },
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 500,
+    "files.eol": "\n",
+    "git.confirmSync": false,
+    "github.copilot.enable": {
+        "*": true,
+        "markdown": false,
+        "php": true,
+        "plaintext": false,
+        "yaml": false
+    },
+    "htmlhint.documentSelector": [
+        "html",
+        "htm"
+    ],
+    "intelephense.files.exclude": [
+        "**/.git/**",
+        "**/.DS_Store/**",
+        "**/node_modules/**",
+        "**/bower_components/**",
+        "**/vendor/**/{Test,test,Tests,tests}/**/*Test.php"
+    ],
+    "intelephense.stubs": [
+        "apache",
+        "bcmath",
+        "bz2",
+        "calendar",
+        "com_dotnet",
+        "Core",
+        "ctype",
+        "curl",
+        "date",
+        "dba",
+        "dom",
+        "enchant",
+        "exif",
+        "FFI",
+        "fileinfo",
+        "filter",
+        "fpm",
+        "ftp",
+        "gd",
+        "gettext",
+        "gmp",
+        "hash",
+        "iconv",
+        "imap",
+        "intl",
+        "json",
+        "ldap",
+        "libxml",
+        "mbstring",
+        "meta",
+        "mysqli",
+        "oci8",
+        "odbc",
+        "openssl",
+        "pcntl",
+        "pcre",
+        "PDO",
+        "pdo_ibm",
+        "pdo_mysql",
+        "pdo_pgsql",
+        "pdo_sqlite",
+        "pgsql",
+        "Phar",
+        "posix",
+        "pspell",
+        "readline",
+        "Reflection",
+        "session",
+        "shmop",
+        "SimpleXML",
+        "snmp",
+        "soap",
+        "sockets",
+        "sodium",
+        "SPL",
+        "sqlite3",
+        "standard",
+        "superglobals",
+        "sysvmsg",
+        "sysvsem",
+        "sysvshm",
+        "tidy",
+        "tokenizer",
+        "xml",
+        "xmlreader",
+        "xmlrpc",
+        "xmlwriter",
+        "xsl",
+        "Zend OPcache",
+        "zip",
+        "zlib",
+        "mongodb"
+    ],
+    "npm.enableRunFromFolder": true,
+    "npm.validate.enable": true,
+    "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
+    "php-cs-fixer.formatHtml": true,
+    "php-cs-fixer.lastDownload": 1650127106639,
+    "php-cs-fixer.rules": "@PSR2",
+    "php.suggest.basic": false,
+    "phpSniffer.autoDetect": true,
+    "phpstan.path": "vendor/bin/phpstan",
+    "redhat.telemetry.enabled": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "sonarlint.disableTelemetry": true,
+    "sonarlint.ls.javaHome": "c:\\Users\\Xavier\\.vscode\\extensions\\sonarsource.sonarlint_managed-jre\\jre\\jdk-11.0.14.1+1-jre",
+    "sonarlint.rules": {
+        "php:S107": {
+            "level": "off"
+        },
+        "php:S112": {
+            "level": "off"
+        },
+        "php:S138": {
+            "level": "off"
+        },
+        "php:S1117": {
+            "level": "off"
+        },
+        "php:S1448": {
+            "level": "off"
+        },
+        "php:S1479": {
+            "level": "off"
+        },
+        "php:S3776": {
+            "level": "off"
+        },
+        "php:S4144": {
+            "level": "off"
+        }
+    },
+    "sonarlint.testFilePattern": "{**/test/**,**/*test*,**/*Test*}",
+    "sortJSON.contextMenu": {
+        "sortJSON": false,
+        "sortJSONAlphaNum": true,
+        "sortJSONAlphaNumReverse": false,
+        "sortJSONKeyLength": false,
+        "sortJSONKeyLengthReverse": false,
+        "sortJSONReverse": false,
+        "sortJSONType": false,
+        "sortJSONTypeReverse": false,
+        "sortJSONValues": false,
+        "sortJSONValuesReverse": false
+    },
+    "telemetry.telemetryLevel": "error",
+    "terminal.integrated.defaultProfile.windows": "Ubuntu-20.04 (WSL)",
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "//TODO",
+        "//TO BE CONFIRMED"
+    ],
+    "todo-tree.highlights.customHighlight": {
+        "//TO BE CONFIRMED": {
+            "background": "yellow",
+            "foreground": "black",
+            "gutterIcon": true,
+            "icon": "cross-reference",
+            "iconColour": "yellow",
+            "opacity": 50,
+            "type": "text"
+        },
+        "//TODO": {
+            "background": "blue",
+            "foreground": "black",
+            "gutterIcon": true,
+            "icon": "tools",
+            "iconColour": "blue",
+            "type": "text"
+        },
+        "FIXME": {
+            "foreground": "black",
+            "gutterIcon": true,
+            "iconColour": "yellow"
+        }
+    },
+    "twig-language-2.correct": true,
+    "window.zoomLevel": 1,
+    "workbench.colorTheme": "Dracula",
+    "workbench.editor.enablePreview": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.tree.indent": 15,
+    "yaml.format.singleQuote": true
+}

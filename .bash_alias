@@ -1,0 +1,41 @@
+alias du='du -h'
+alias grep='grep -i --color'
+
+alias ls='ls -hF --color=tty'
+
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -CF'
+
+#Classé par date
+alias llt='ls -l -t -h'
+
+#classé par date (inversé)
+#permet d'avoir le plus recent fichier/dossier sous les yeux
+alias lltr='ls -l -tr -h'
+
+#Avoir seulement les répertoires
+alias lld='ls -l -d */ -h'
+
+#Répertoires les plus récents
+alias lldtr='ls -l -d */ -tr -h'
+
+#Avoir seulement les fichiers/dossiers cachés
+alias ll.='ls -li -A -h --ignore=^"[^\.]"'
+
+alias yps='ps -ef | grep -v grep | grep '
+
+alias reload='source ~/.bash_profile'
+
+# Apt-get
+alias up='sudo apt-get update && sudo apt-get upgrade'
+alias ins='sudo apt-get install'
+
+# Compresser/décompresser (tar)
+alias mktar='tar -cvf'
+alias untar='tar -xvf'
+
+alias mkdir='mkdir -p'
+
+alias grosfichiers='du -sk $(/bin/ls -A) | sort -rn | head -10'
+
