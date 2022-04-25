@@ -74,7 +74,6 @@
             "underline": false
         }
     ],
-    "bracket-pair-colorizer-2.depreciation-notice": false,
     "css.enabledLanguages": [
         "html",
         "twig"
@@ -325,7 +324,6 @@
             "type": "text-and-comment"
         }
     },
-    "twig-language-2.correct": true,
     "window.zoomLevel": 1,
     "workbench.colorTheme": "Dracula",
     "workbench.editor.enablePreview": false,
