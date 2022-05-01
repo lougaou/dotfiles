@@ -21,10 +21,8 @@
     "[php]": {
         "editor.defaultFormatter": "junstyle.php-cs-fixer"
     },
-    "[scss]": {
-        "editor.defaultFormatter": "michelemelluso.code-beautifier"
-    },
     "[yaml]": {
+        "editor.formatOnSave": false,
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
     "better-comments.tags": [
@@ -135,7 +133,8 @@
     },
     "htmlhint.documentSelector": [
         "html",
-        "htm"
+        "htm",
+        "twig"
     ],
     "intelephense.files.exclude": [
         "**/.git/**",
@@ -234,37 +233,9 @@
     "phpmd.verbose": true,
     "phpstan.path": "vendor/bin/phpstan",
     "psalm.enableVerbose": true,
-    "psalm.psalmVersion": "",
     "redhat.telemetry.enabled": false,
     "security.workspace.trust.untrustedFiles": "open",
     "sonarlint.disableTelemetry": true,
-    "sonarlint.ls.javaHome": "c:\\Users\\Xavier\\.vscode\\extensions\\sonarsource.sonarlint_managed-jre\\jre\\jdk-11.0.14.1+1-jre",
-    "sonarlint.rules": {
-        "php:S107": {
-            "level": "off"
-        },
-        "php:S112": {
-            "level": "off"
-        },
-        "php:S138": {
-            "level": "off"
-        },
-        "php:S1117": {
-            "level": "off"
-        },
-        "php:S1448": {
-            "level": "off"
-        },
-        "php:S1479": {
-            "level": "off"
-        },
-        "php:S3776": {
-            "level": "off"
-        },
-        "php:S4144": {
-            "level": "off"
-        }
-    },
     "sonarlint.testFilePattern": "{**/test/**,**/*test*,**/*Test*}",
     "sortJSON.contextMenu": {
         "sortJSON": false,
@@ -329,5 +300,6 @@
     "workbench.editor.enablePreview": false,
     "workbench.iconTheme": "material-icon-theme",
     "workbench.tree.indent": 15,
-    "yaml.format.singleQuote": true
+    "yaml.format.singleQuote": true,
+    "sonarlint.ls.javaHome": "c:\\Users\\Xavier\\.vscode\\extensions\\sonarsource.sonarlint_managed-jre\\jre\\jdk-11.0.14.1+1-jre"
 }
