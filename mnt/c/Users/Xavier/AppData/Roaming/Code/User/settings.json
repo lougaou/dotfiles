@@ -301,5 +301,25 @@
     "workbench.iconTheme": "material-icon-theme",
     "workbench.tree.indent": 15,
     "yaml.format.singleQuote": true,
-    "sonarlint.ls.javaHome": "c:\\Users\\Xavier\\.vscode\\extensions\\sonarsource.sonarlint_managed-jre\\jre\\jdk-11.0.14.1+1-jre"
+    "sonarlint.ls.javaHome": "c:\\Users\\Xavier\\.vscode\\extensions\\sonarsource.sonarlint_managed-jre\\jre\\jdk-11.0.14.1+1-jre",
+    "[dockerfile]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "sonarlint.rules": {
+        "php:S1448": {
+            "level": "off"
+        },
+        "php:S107": {
+            "level": "off"
+        },
+        "php:S1117": {
+            "level": "off"
+        },
+        "php:S138": {
+            "level": "off"
+        },
+        "php:S1479": {
+            "level": "off"
+        }
+    }
 }
