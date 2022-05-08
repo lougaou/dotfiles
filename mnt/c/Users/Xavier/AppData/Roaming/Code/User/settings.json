@@ -231,6 +231,8 @@
     "php.suggest.basic": false,
     "phpmd.rules": "${workspaceFolder}/phpmd.xml.dist",
     "phpmd.verbose": true,
+    "phpmd.validate.rulesetsFile": "phpmd.xml.dist",
+    "phpmd.validate.executablePath": "vendor/bin/phpmd",
     "phpstan.path": "vendor/bin/phpstan",
     "psalm.enableVerbose": true,
     "redhat.telemetry.enabled": false,
@@ -319,6 +321,18 @@
             "level": "off"
         },
         "php:S1479": {
+            "level": "off"
+        },
+        "php:S3776": {
+            "level": "off"
+        },
+        "php:S4144": {
+            "level": "off"
+        },
+        "php:S6353": {
+            "level": "off"
+        },
+        "php:S6396": {
             "level": "off"
         }
     }

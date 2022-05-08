@@ -126,7 +126,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export GITHUB_TOKEN=SECRET
 export USER_ID=$(id -u ${USER})
 export GROUP_ID=$(id -g ${USER})
 export PATH="${HOME}/bin:${PATH}"
+
+export GITHUB_TOKEN=SECRET
+export DATABASE_PASSWORD=SECRET
+export REDIS_PASSWORD=SECRET
