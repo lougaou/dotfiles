@@ -37,6 +37,10 @@
 127.0.0.1 api.gainsbourg.loc
 127.0.0.1 images.gainsbourg.loc
 
+127.0.0.1 api.gainsbourg.dev
+127.0.0.1 www.gainsbourg.dev
+127.0.0.1 images.gainsbourg.dev
+
 # Added by Docker Desktop
 192.168.1.35 host.docker.internal
 192.168.1.35 gateway.docker.internal
@@ -45,3 +49,5 @@
 # End of section
 
 127.0.0.1 api.demo.loc
+
+127.0.0.1 testbucket.minio

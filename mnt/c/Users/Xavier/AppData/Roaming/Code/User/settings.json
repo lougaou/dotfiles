@@ -1,6 +1,9 @@
 {
+    "[dockerfile]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
     "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "vscode.html-language-features"
     },
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -19,11 +22,14 @@
         "editor.defaultFormatter": "ahmadalli.vscode-nginx-conf"
     },
     "[php]": {
-        "editor.defaultFormatter": "junstyle.php-cs-fixer"
+        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+    },
+    "[scss]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
     },
     "[yaml]": {
-        "editor.formatOnSave": false,
-        "editor.defaultFormatter": "redhat.vscode-yaml"
+        "editor.defaultFormatter": "redhat.vscode-yaml",
+        "editor.formatOnSave": false
     },
     "better-comments.tags": [
         {
@@ -80,9 +86,10 @@
         "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css",
         "${fileBasenameNoExtension}.css"
     ],
+    "diffEditor.ignoreTrimWhitespace": false,
     "editor.formatOnPaste": false,
     "editor.formatOnSave": true,
-    "editor.formatOnType": false,
+    "editor.formatOnType": true,
     "editor.guides.bracketPairs": true,
     "editor.inlineSuggest.enabled": true,
     "editor.quickSuggestions": {
@@ -115,10 +122,12 @@
         "*.htm": "html",
         "*.html": "html",
         "*.md.dist": "markdown",
+        "*.neon.dist": "yaml",
         "*.twig": "html",
         "*.xml.dist": "xml",
         "*.yaml.dist": "yaml",
-        "Dockerfile*": "dockerfile"
+        "Dockerfile*": "dockerfile",
+        ".browserslistrc": "plaintext"
     },
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 500,
@@ -131,6 +140,7 @@
         "plaintext": false,
         "yaml": false
     },
+    "html.format.indentHandlebars": true,
     "htmlhint.documentSelector": [
         "html",
         "htm",
@@ -217,6 +227,7 @@
         "zlib",
         "mongodb"
     ],
+    "javascript.updateImportsOnFileMove.enabled": "never",
     "npm.enableRunFromFolder": true,
     "php-cs-fixer.allowRisky": true,
     "php-cs-fixer.autoFixByBracket": true,
@@ -224,20 +235,72 @@
     "php-cs-fixer.config": "${workspaceFolder}/.php-cs-fixer.dist.php",
     "php-cs-fixer.documentFormattingProvider": true,
     "php-cs-fixer.exclude": [],
-    "php-cs-fixer.executablePath": "${workspaceFolder}/vendor/bin/php-cs-fixer",
+    "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
     "php-cs-fixer.formatHtml": true,
+    "php-cs-fixer.lastDownload": 1667637461088,
     "php-cs-fixer.onsave": true,
     "php-cs-fixer.pathMode": "override",
     "php.suggest.basic": false,
     "phpmd.rules": "${workspaceFolder}/phpmd.xml.dist",
-    "phpmd.verbose": true,
-    "phpmd.validate.rulesetsFile": "phpmd.xml.dist",
     "phpmd.validate.executablePath": "vendor/bin/phpmd",
+    "phpmd.validate.rulesetsFile": "phpmd.xml.dist",
+    "phpmd.verbose": true,
     "phpstan.path": "vendor/bin/phpstan",
     "psalm.enableVerbose": true,
     "redhat.telemetry.enabled": false,
     "security.workspace.trust.untrustedFiles": "open",
     "sonarlint.disableTelemetry": true,
+    "sonarlint.ls.javaHome": "c:\\Users\\Xavier\\.vscode\\extensions\\sonarsource.sonarlint_managed-jre\\jre\\jdk-11.0.14.1+1-jre",
+    "sonarlint.rules": {
+        "php:S107": {
+            "level": "off"
+        },
+        "php:S112": {
+            "level": "off"
+        },
+        "php:S138": {
+            "level": "off"
+        },
+        "php:S1117": {
+            "level": "off"
+        },
+        "php:S1142": {
+            "level": "off"
+        },
+        "php:S1192": {
+            "level": "off"
+        },
+        "php:S1448": {
+            "level": "off"
+        },
+        "php:S1479": {
+            "level": "off"
+        },
+        "php:S3776": {
+            "level": "off"
+        },
+        "php:S4144": {
+            "level": "off"
+        },
+        "php:S6353": {
+            "level": "off"
+        },
+        "php:S6396": {
+            "level": "off"
+        },
+        "php:S1185": {
+            "level": "off"
+        },
+        "php:S1808": {
+            "level": "off"
+        },
+        "Web:AvoidCommentedOutCodeCheck": {
+            "level": "off"
+        },
+        "typescript:S125": {
+            "level": "off"
+        }
+    },
     "sonarlint.testFilePattern": "{**/test/**,**/*test*,**/*Test*}",
     "sortJSON.contextMenu": {
         "sortJSON": false,
@@ -260,21 +323,21 @@
         "TO BE CONFIRMED"
     ],
     "todo-tree.highlights.customHighlight": {
-        "HACK": {
-            "background": "#00de00",
-            "foreground": "#fff",
-            "gutterIcon": true,
-            "icon": "beaker",
-            "iconColour": "#00de00",
-            "opacity": 100,
-            "type": "text-and-comment"
-        },
         "FIXME": {
             "background": "#ff0000",
             "foreground": "#ffffff",
             "gutterIcon": true,
             "icon": "tools",
             "iconColour": "#ff0000",
+            "opacity": 100,
+            "type": "text-and-comment"
+        },
+        "HACK": {
+            "background": "#00de00",
+            "foreground": "#fff",
+            "gutterIcon": true,
+            "icon": "beaker",
+            "iconColour": "#00de00",
             "opacity": 100,
             "type": "text-and-comment"
         },
@@ -303,37 +366,13 @@
     "workbench.iconTheme": "material-icon-theme",
     "workbench.tree.indent": 15,
     "yaml.format.singleQuote": true,
-    "sonarlint.ls.javaHome": "c:\\Users\\Xavier\\.vscode\\extensions\\sonarsource.sonarlint_managed-jre\\jre\\jdk-11.0.14.1+1-jre",
-    "[dockerfile]": {
-        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    "namespaceResolver.sortAlphabetically": true,
+    "editor.largeFileOptimizations": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "sonarlint.rules": {
-        "php:S1448": {
-            "level": "off"
-        },
-        "php:S107": {
-            "level": "off"
-        },
-        "php:S1117": {
-            "level": "off"
-        },
-        "php:S138": {
-            "level": "off"
-        },
-        "php:S1479": {
-            "level": "off"
-        },
-        "php:S3776": {
-            "level": "off"
-        },
-        "php:S4144": {
-            "level": "off"
-        },
-        "php:S6353": {
-            "level": "off"
-        },
-        "php:S6396": {
-            "level": "off"
-        }
-    }
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "scss.lint.unknownAtRules": "ignore"
 }
