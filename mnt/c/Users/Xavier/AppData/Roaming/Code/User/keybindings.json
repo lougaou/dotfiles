@@ -5,25 +5,6 @@
         "command": "editor.action.transformToUppercase"
     },
     {
-        "key": "alt+oem_5",
-        "command": "github.copilot.openPanelForRange"
-    },
-    {
-        "key": "alt+oem_2",
-        "command": "editor.action.inlineSuggest.showNext",
-        "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus"
-    },
-    {
-        "key": "alt+oem_8",
-        "command": "editor.action.inlineSuggest.showPrevious",
-        "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus"
-    },
-    {
-        "key": "alt+oem_3",
-        "command": "editor.action.inlineSuggest.trigger",
-        "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
-    },
-    {
         "key": "ctrl+alt+l",
         "command": "lorem-ipsum.paragraph",
         "when": "editorTextFocus"
@@ -31,5 +12,23 @@
     {
         "key": "alt+g",
         "command": "phpGetterSetter.insertGetterAndSetter"
+    },
+
+    // Etend la sélection
+    {
+        "key": "ctrl+d",
+        "command": "editor.action.smartSelect.expand",
+        "when": "editorTextFocus"
+    },
+    // Trouve toutes les occurences du mot sélectionné
+    {
+        "key": "shift+ctrl+d",
+        "command": "editor.action.selectHighlights",
+        "when": "editorFocus"
+    },
+    // Crée un nouveau fichier
+    {
+        "key": "ctrl+n",
+        "command": "explorer.newFile"
     }
 ]

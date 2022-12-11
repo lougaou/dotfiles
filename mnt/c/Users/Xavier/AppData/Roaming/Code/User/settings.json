@@ -1,9 +1,15 @@
 {
+    "[css]": {
+        "editor.defaultFormatter": "stylelint.vscode-stylelint"
+    },
     "[dockerfile]": {
         "editor.defaultFormatter": "ms-azuretools.vscode-docker"
     },
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -25,11 +31,13 @@
         "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
     },
     "[scss]": {
-        "editor.defaultFormatter": "vscode.css-language-features"
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[yaml]": {
-        "editor.defaultFormatter": "redhat.vscode-yaml",
-        "editor.formatOnSave": false
+        "editor.defaultFormatter": "redhat.vscode-yaml"
     },
     "better-comments.tags": [
         {
@@ -82,23 +90,38 @@
         "html",
         "twig"
     ],
+    "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": false,
     "css.styleSheets": [
         "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css",
         "${fileBasenameNoExtension}.css"
     ],
+    "css.validate": false,
     "diffEditor.ignoreTrimWhitespace": false,
+    "editor.acceptSuggestionOnCommitCharacter": false, // Evite que l'autocomplétion soit accepté lors d'un . par exemple
     "editor.formatOnPaste": false,
     "editor.formatOnSave": true,
-    "editor.formatOnType": true,
+    "editor.formatOnType": false,
     "editor.guides.bracketPairs": true,
     "editor.inlineSuggest.enabled": true,
+    "editor.largeFileOptimizations": false,
+    "editor.linkedEditing": true, // Quand on change un élément HTML, change la balise fermante
     "editor.quickSuggestions": {
         "comments": true,
         "other": true,
         "strings": true
     },
+    "workbench.colorCustomizations": {
+        "[Dracula]": {
+            "editor.selectionBackground": "#3D59A1",
+            "editor.selectionHighlightBackground": "#3D59A1"
+        },
+    },
+    "editor.renderWhitespace": "trailing",
     "editor.snippetSuggestions": "top",
+    "editor.suggest.insertMode": "replace", // L'autocomplétion remplace le mot en cours
     "editor.suggestSelection": "first",
+    "editor.wordWrap": "on",
     "emmet.includeLanguages": {
         "javascript": "javascriptreact",
         "plaintext": "pug",
@@ -118,6 +141,7 @@
         "typescriptreact"
     ],
     "files.associations": {
+        ".browserslistrc": "plaintext",
         "*.conf.dist": "NGINX",
         "*.htm": "html",
         "*.html": "html",
@@ -126,20 +150,13 @@
         "*.twig": "html",
         "*.xml.dist": "xml",
         "*.yaml.dist": "yaml",
-        "Dockerfile*": "dockerfile",
-        ".browserslistrc": "plaintext"
+        "Dockerfile*": "dockerfile"
     },
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 500,
     "files.eol": "\n",
     "git.confirmSync": false,
-    "github.copilot.enable": {
-        "*": true,
-        "markdown": false,
-        "php": true,
-        "plaintext": false,
-        "yaml": false
-    },
+    "gitlens.currentLine.enabled": true,
     "html.format.indentHandlebars": true,
     "htmlhint.documentSelector": [
         "html",
@@ -228,26 +245,30 @@
         "mongodb"
     ],
     "javascript.updateImportsOnFileMove.enabled": "never",
+    "less.validate": false,
+    "namespaceResolver.sortAlphabetically": true,
     "npm.enableRunFromFolder": true,
     "php-cs-fixer.allowRisky": true,
     "php-cs-fixer.autoFixByBracket": true,
     "php-cs-fixer.autoFixBySemicolon": true,
-    "php-cs-fixer.config": "${workspaceFolder}/.php-cs-fixer.dist.php",
+    "php-cs-fixer.config": "${workspaceFolder}/tools/phpcs-fixer/.php-cs-fixer.dist.php",
     "php-cs-fixer.documentFormattingProvider": true,
     "php-cs-fixer.exclude": [],
     "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
     "php-cs-fixer.formatHtml": true,
-    "php-cs-fixer.lastDownload": 1667637461088,
+    "php-cs-fixer.lastDownload": 1669549325889,
     "php-cs-fixer.onsave": true,
     "php-cs-fixer.pathMode": "override",
     "php.suggest.basic": false,
-    "phpmd.rules": "${workspaceFolder}/phpmd.xml.dist",
-    "phpmd.validate.executablePath": "vendor/bin/phpmd",
-    "phpmd.validate.rulesetsFile": "phpmd.xml.dist",
+    "phpmd.rules": "${workspaceFolder}/tools/phpmd/phpmd.xml.dist",
+    "phpmd.validate.executablePath": "${workspaceFolder}/tools/phpmd/vendor/bin/phpmd",
+    "phpmd.validate.rulesetsFile": "${workspaceFolder}/tools/phpmd/phpmd.xml.dist",
     "phpmd.verbose": true,
-    "phpstan.path": "vendor/bin/phpstan",
+    "phpstan.path": "${workspaceFolder}/tools/phpstan/vendor/bin/phpstan",
     "psalm.enableVerbose": true,
     "redhat.telemetry.enabled": false,
+    "scss.lint.unknownAtRules": "ignore",
+    "scss.validate": false,
     "security.workspace.trust.untrustedFiles": "open",
     "sonarlint.disableTelemetry": true,
     "sonarlint.ls.javaHome": "c:\\Users\\Xavier\\.vscode\\extensions\\sonarsource.sonarlint_managed-jre\\jre\\jdk-11.0.14.1+1-jre",
@@ -267,6 +288,9 @@
         "php:S1142": {
             "level": "off"
         },
+        "php:S1185": {
+            "level": "off"
+        },
         "php:S1192": {
             "level": "off"
         },
@@ -276,10 +300,16 @@
         "php:S1479": {
             "level": "off"
         },
+        "php:S1808": {
+            "level": "off"
+        },
         "php:S3776": {
             "level": "off"
         },
         "php:S4144": {
+            "level": "off"
+        },
+        "php:S4833": {
             "level": "off"
         },
         "php:S6353": {
@@ -288,16 +318,10 @@
         "php:S6396": {
             "level": "off"
         },
-        "php:S1185": {
-            "level": "off"
-        },
-        "php:S1808": {
+        "typescript:S125": {
             "level": "off"
         },
         "Web:AvoidCommentedOutCodeCheck": {
-            "level": "off"
-        },
-        "typescript:S125": {
             "level": "off"
         }
     },
@@ -314,6 +338,11 @@
         "sortJSONValues": false,
         "sortJSONValuesReverse": false
     },
+    "stylelint.configFile": "${workspaceFolder}/.stylelintrc",
+    "stylelint.validate": [
+        "css",
+        "scss"
+    ],
     "telemetry.telemetryLevel": "error",
     "terminal.integrated.defaultProfile.windows": "Ubuntu-20.04 (WSL)",
     "todo-tree.general.tags": [
@@ -360,19 +389,11 @@
             "type": "text-and-comment"
         }
     },
+    "typescript.updateImportsOnFileMove.enabled": "never",
     "window.zoomLevel": 1,
     "workbench.colorTheme": "Dracula",
-    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreview": false, // Un clic sur un fichier l'ouvre
     "workbench.iconTheme": "material-icon-theme",
     "workbench.tree.indent": 15,
-    "yaml.format.singleQuote": true,
-    "namespaceResolver.sortAlphabetically": true,
-    "editor.largeFileOptimizations": false,
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "scss.lint.unknownAtRules": "ignore"
+    "yaml.format.singleQuote": true
 }
