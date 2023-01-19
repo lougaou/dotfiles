@@ -46,3 +46,5 @@ alias git-clean='git branch --merged | egrep -v "(^\*|main|master)" | xargs git 
 alias git-remove-latest-local-commit='git reset --hard HEAD^'
 
 alias git-latest-local-commit-back-to-staging='git reset --soft HEAD^'
+
+alias git-repush='git adda; git commit --amend --no-edit ; git push --force'
