@@ -42,3 +42,7 @@ alias grosfichiers='du -sk $(/bin/ls -A) | sort -rn | head -10'
 alias save-settings='source /home/xav/dotfiles/save.sh'
 
 alias git-clean='git branch --merged | egrep -v "(^\*|main|master)" | xargs git branch -d; git remote prune origin'
+
+alias git-remove-latest-local-commit='git reset --hard HEAD^'
+
+alias git-latest-local-commit-back-to-staging='git reset --soft HEAD^'

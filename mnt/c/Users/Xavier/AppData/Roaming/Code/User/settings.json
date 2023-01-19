@@ -6,7 +6,11 @@
         "editor.defaultFormatter": "ms-azuretools.vscode-docker"
     },
     "[html]": {
-        "editor.defaultFormatter": "vscode.html-language-features"
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": true
+        },
+        "editor.formatOnSave": false
     },
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -34,7 +38,11 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": true
+        },
+        "editor.formatOnSave": false
     },
     "[yaml]": {
         "editor.defaultFormatter": "redhat.vscode-yaml"
@@ -91,7 +99,7 @@
         "twig"
     ],
     "editor.minimap.enabled": false,
-    "breadcrumbs.enabled": false,
+    "breadcrumbs.enabled": true,
     "css.styleSheets": [
         "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css",
         "${fileBasenameNoExtension}.css"
@@ -163,87 +171,6 @@
         "htm",
         "twig"
     ],
-    "intelephense.files.exclude": [
-        "**/.git/**",
-        "**/.DS_Store/**",
-        "**/node_modules/**",
-        "**/bower_components/**",
-        "**/vendor/**/{Test,test,Tests,tests}/**/*Test.php"
-    ],
-    "intelephense.stubs": [
-        "apache",
-        "bcmath",
-        "bz2",
-        "calendar",
-        "com_dotnet",
-        "Core",
-        "ctype",
-        "curl",
-        "date",
-        "dba",
-        "dom",
-        "enchant",
-        "exif",
-        "FFI",
-        "fileinfo",
-        "filter",
-        "fpm",
-        "ftp",
-        "gd",
-        "gettext",
-        "gmp",
-        "hash",
-        "iconv",
-        "imap",
-        "intl",
-        "json",
-        "ldap",
-        "libxml",
-        "mbstring",
-        "meta",
-        "mysqli",
-        "oci8",
-        "odbc",
-        "openssl",
-        "pcntl",
-        "pcre",
-        "PDO",
-        "pdo_ibm",
-        "pdo_mysql",
-        "pdo_pgsql",
-        "pdo_sqlite",
-        "pgsql",
-        "Phar",
-        "posix",
-        "pspell",
-        "readline",
-        "Reflection",
-        "session",
-        "shmop",
-        "SimpleXML",
-        "snmp",
-        "soap",
-        "sockets",
-        "sodium",
-        "SPL",
-        "sqlite3",
-        "standard",
-        "superglobals",
-        "sysvmsg",
-        "sysvsem",
-        "sysvshm",
-        "tidy",
-        "tokenizer",
-        "xml",
-        "xmlreader",
-        "xmlrpc",
-        "xmlwriter",
-        "xsl",
-        "Zend OPcache",
-        "zip",
-        "zlib",
-        "mongodb"
-    ],
     "javascript.updateImportsOnFileMove.enabled": "never",
     "less.validate": false,
     "namespaceResolver.sortAlphabetically": true,
@@ -256,7 +183,7 @@
     "php-cs-fixer.exclude": [],
     "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
     "php-cs-fixer.formatHtml": true,
-    "php-cs-fixer.lastDownload": 1669549325889,
+    "php-cs-fixer.lastDownload": 1673776124541,
     "php-cs-fixer.onsave": true,
     "php-cs-fixer.pathMode": "override",
     "php.suggest.basic": false,
@@ -322,6 +249,24 @@
             "level": "off"
         },
         "Web:AvoidCommentedOutCodeCheck": {
+            "level": "off"
+        },
+        "typescript:S3579": {
+            "level": "off"
+        },
+        "typescript:S6035": {
+            "level": "off"
+        },
+        "typescript:S5869": {
+            "level": "off"
+        },
+        "typescript:S6353": {
+            "level": "off"
+        },
+        "typescript:S3776": {
+            "level": "off"
+        },
+        "typescript:S1871": {
             "level": "off"
         }
     },
@@ -395,5 +340,20 @@
     "workbench.editor.enablePreview": false, // Un clic sur un fichier l'ouvre
     "workbench.iconTheme": "material-icon-theme",
     "workbench.tree.indent": 15,
-    "yaml.format.singleQuote": true
+    "yaml.format.singleQuote": true,
+    "CodeGPT.query.language": "English",
+    "intelephense.telemetry.enabled": false,
+    "intelephense.files.exclude": [
+        "**/.git/**",
+        "**/.svn/**",
+        "**/.hg/**",
+        "**/CVS/**",
+        "**/.DS_Store/**",
+        "**/node_modules/**",
+        "**/bower_components/**",
+        "**/vendor/**/{Tests,tests}/**",
+        "**/.history/**",
+        "**/vendor/**/vendor/**",
+        "**/tools/**"
+    ]
 }
